@@ -17,13 +17,25 @@ namespace Paises.Services
             _context = context;
         }
 
-        public async Task<List<CountryDTO>> GetAll(int pageNumber, int recordsPerPage,string filter)
+        public async Task<List<CountryDTO>> GetAll(int pageNumber, int recordsPerPage, string filter)
         {
-           var resultQuery = await _context.Countries
-                            .Include(c => c.CountryRestaurants)
-                            .ThenInclude(cr => cr.restaurant)
-                            .Include(c => c.CountryHotels)
-                            .ThenInclude(ch => ch.hotel).ToListAsync();
+
+            if (filter is null || filter == string.Empty) 
+            {
+                var resultQuery = await _context.Countries
+                 .Include(c => c.CountryRestaurants)
+                 .ThenInclude(cr => cr.restaurant)
+                 .Include(c => c.CountryHotels)
+                 .ThenInclude(ch => ch.hotel).ToListAsync();
+
+                return _mapper.Map<List<CountryDTO>>(resultQuery);
+            }
+            else { 
+            var resultQuery = await _context.Countries
+                             .Include(c => c.CountryRestaurants)
+                             .ThenInclude(cr => cr.restaurant)
+                             .Include(c => c.CountryHotels)
+                             .ThenInclude(ch => ch.hotel).ToListAsync();
             var resultFilter = resultQuery.Where(x => x.Name.Contains(filter) ||
                                         x.Code.Contains(filter) ||
                                         x.CountryHotels.Any(y => y.hotel.Name.Contains(filter)) ||
@@ -33,14 +45,22 @@ namespace Paises.Services
                                         .Skip((pageNumber - 1) * recordsPerPage)
                                         .Take(recordsPerPage).ToList();
             return _mapper.Map<List<CountryDTO>>(resultFilter);
+            }
         }
 
         public int GetTotalRecords(string filter)
         {
-            return _context.Countries.Where(x => x.Name.Contains(filter) ||
-                                       x.Code.Contains(filter) ||
-                                       x.CountryHotels.Any(y => y.hotel.Name.Contains(filter)) ||
-                                       x.CountryRestaurants.Any(z => z.restaurant.Name.Contains(filter))).Count();
+            if (filter is null || filter == string.Empty) 
+            {
+               return  _context.Countries.Count();
+            }
+            else
+            {
+                return _context.Countries.Where(x => x.Name.Contains(filter) ||
+                       x.Code.Contains(filter) ||
+                       x.CountryHotels.Any(y => y.hotel.Name.Contains(filter)) ||
+                       x.CountryRestaurants.Any(z => z.restaurant.Name.Contains(filter))).Count();
+            }
         }
             
     }

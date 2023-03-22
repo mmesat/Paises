@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\Paises.csproj": {}
+    "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises.csproj": {}
   },
   "projects": {
-    "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\Paises.csproj": {
+    "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\Paises.csproj",
+        "projectUniqueName": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises.csproj",
         "projectName": "Paises",
-        "projectPath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\Paises.csproj",
+        "projectPath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises.csproj",
         "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
-        "outputPath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\obj\\",
+        "outputPath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

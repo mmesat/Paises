@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8/JVJXk0D7Z01UBH7opff+faM1xwj3xA/bIuNjcZSC4LjaGWSRaCKFi7b93GAASyk4T6fPIeELPK/kz5MSnidw==",
+  "dgSpecHash": "G795SEINscZkIc8ACS/QJOB2/xuRoEb1hJbv8HnD1X/I/Yy79qIvUecl2hhraQAd83ksiSjTVMlk54huoHFzKg==",
   "success": true,
-  "projectFilePath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises\\Paises.csproj",
+  "projectFilePath": "F:\\Documentos\\Mis trabajos\\Repos\\paises\\Paises\\Paises.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\migue\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\migue\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
